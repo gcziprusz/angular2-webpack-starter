@@ -73,7 +73,7 @@ export class XLarge {
   </main>
 
   <footer x-large>
-    WebPack Angular 2 Starter by <a href="https://twitter.com/AngularClass">@AngularClass</a>
+    WebPack Angular 2 Starter by XYZ <a href="https://twitter.com/AngularClass">@AngularClass</a>
   </footer>
   `
 })

@@ -1,0 +1,33 @@
+.nav{
+  background: #000;
+  height:50px;
+}
+
+.nav-image{
+  height:25px;
+  float:right;
+  margin: 13px;
+}
+.nav-route-link{
+  color: #fff;
+  text-decoration: none;
+  padding: 16px;
+  display: block;
+}
+
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background: #000;
+  height:100px;
+}
+.footer-message{
+  color: #fff;
+}
+.footer-message-link{
+  color: #fff;
+  text-decoration: none;
+}

@@ -70,12 +70,12 @@ module.exports = {
       // App
 
       // './examples/  /bootstrap' <-- view examples
-
-      // './examples/rx-autosuggest/bootstrap'
+      //'./examples/large-app/bootstrap'
+      //'./examples/rx-autosuggest/bootstrap'
       // './examples/rx-draggable/bootstrap'
       // './examples/rx-timeflies/bootstrap'
-      // './examples/simple-component/bootstrap'
-      // './examples/simple-todo/bootstrap'
+     //'./examples/simple-component/bootstrap'
+      //'./examples/simple-todo/bootstrap'
 
       './src/app/bootstrap'
     ]
@@ -110,8 +110,10 @@ module.exports = {
 
       // Support for CSS as raw text
       { test: /\.css$/,   loader: 'raw' },
+      // { test: /\.scss$/,  loaders: ["style", "css", "sass"]},
+      // { test: /\.scss$/, loader: "style!css!sass?outputStyle=expanded&" +
+                    // "includePaths[]=" + (path.resolve(__dirname, "./src")) },
 
-      // support for .html as raw text
       { test: /\.html$/,  loader: 'raw' },
 
       // Support for .ts files.
@@ -159,6 +161,7 @@ module.exports = {
    * rather than `module.id` for `moduleId` in `@View`
    */
   node: {
+    fs: "empty",  // required for jade-html-loader to work
     crypto: false,
     __filename: true
   }

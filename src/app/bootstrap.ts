@@ -1,26 +1,27 @@
 /// <reference path="../typings/_custom.d.ts" />
 
-/*
- * Providers provided by Angular
- */
-import {bootstrap, FORM_PROVIDERS, ELEMENT_PROBE_PROVIDERS} from 'angular2/angular2';
-import {ROUTER_PROVIDERS} from 'angular2/router';
+import {bootstrap} from 'angular2/angular2';
+
+import {FORM_PROVIDERS} from 'angular2/angular2';
 import {HTTP_PROVIDERS} from 'angular2/http';
+import {ROUTER_PROVIDERS} from 'angular2/router';
 
-/*
- * App Component
- * our top level component that holds all of our components
- */
-import {App} from './app';
+// import {APP_SERVICES_BINDINGS} from './services/services';
+import {App} from './components/app/app';
 
-/*
- * Bootstrap our Angular app with a top level component `App` and inject
- * our Services and Providers into Angular's dependency injection
- */
-bootstrap(App, [
-  // These are dependencies of our App
+const UNIVERSAL_BINDINGS = [
+  HTTP_PROVIDERS,
   FORM_PROVIDERS,
   ROUTER_PROVIDERS,
-  HTTP_PROVIDERS,
-  ELEMENT_PROBE_PROVIDERS
-]);
+
+  // APP_SERVICES_BINDINGS
+];
+
+const APP_BINDINGS = [
+  UNIVERSAL_BINDINGS
+];
+
+bootstrap(
+  App,
+  APP_BINDINGS
+);
